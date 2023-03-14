@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j1^09y!gwp8z0za!b28__@pceqsd^5!d-sn3$4bj^2ke^lgjvw'
+SECRET_KEY = 'django-insecure-+0=%sr_#kf#42v@ww2y*^zv-o6qnz&3b1o8vy=uu6!x(s+2lp$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'mainapp',
+    'authapp',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +53,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'stepshop.urls'
+
+AUTH_USER_MODEL = 'authapp.ShopUser'
 
 TEMPLATES = [
     {

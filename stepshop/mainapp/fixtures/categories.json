@@ -1,0 +1,10 @@
+[
+  {
+    "model": "mainapp.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Кеды",
+      "description": "Наши кеды"
+    }
+  }
+]
