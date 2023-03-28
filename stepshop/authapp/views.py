@@ -32,16 +32,23 @@ def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('index'))
 
-def reqister(request):
+
+def register(request):
     title = 'регистрация'
 
-    if request.method == "POST":
-        reqister_form = ShopUserRegisterForm(request.POST, request.FILES)
+    if request.method == 'POST':
+        register_form = ShopUserRegisterForm(request.POST, request.FILES)
 
-        if reqister_form.is_valid():
-            reqister_form.save()
+        if register_form.is_valid():
+            register_form.save()
             return HttpResponseRedirect(reverse('auth:login'))
-        else:
-            reqister_form = ShopUserRegisterForm()
+    else:
+        register_form = ShopUserRegisterForm()
+
+    context = {
+        'title': title,
+        'register_form': register_form,
+    }
+    return render(request, 'auth/register.html', context)
 
 
