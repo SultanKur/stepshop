@@ -1,0 +1,53 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}
+{{title|capfirst}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>{{title|capfirst}}</h1>
+    <div class="row">
+        <div class="mx-auto col-4">
+            {% if user.avatar %}
+            <div class="user_avatar">
+                <img src="{{ user.avatar.url }}" alt="{{ user.username }}"
+                     class="rounded-circle">
+            </div>
+            {% endif %}
+
+            <form action="{% url 'auth:edit' %}" class="form-horizontal" method="post"
+                  enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <p>
+                    <label>Login:</label>
+                    {{edit_form.username}}
+                </p>
+                <p>
+                    <label>Имя пользователя:</label>
+                    {{edit_form.first_name}}
+                </p>
+                <p>
+                    <label>Email:</label>
+                    {{edit_form.email}}
+                </p>
+                <p>
+                    <label>Возраст:</label>
+                    {{edit_form.age}}
+                </p>
+                <p>
+                    <label>Аватар:</label>
+                    {{edit_form.avatar}}
+                </p>
+
+                <button class="btn btn-primary" type="submit">Сохранить</button>
+            </form>
+            <button class="btn btn-primary">
+                <a href="{% url 'index' %}" class="text-light">На главную</a>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
