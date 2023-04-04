@@ -7,7 +7,7 @@ from mainapp.models import Product
 
 def basket(request):
     if request.user.is_authenticated:
-        basket = Basket.object.filter(user=request.user)
+        basket = Basket.objects.filter(user=request.user)
 
         context = {
             'basket': basket,
@@ -32,4 +32,11 @@ def basket_add(request, pk):
 
 
 def basket_remove(request, pk):
-    return render(request, 'basket/basket.html')
+    basket_record = get_object_or_404(Basket, pk=pk)
+    basket_record.delete()
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+
+

@@ -54,9 +54,10 @@ https://www.tooplate.com/view/2114-pixie
             {% endif %}
 
             {% if basket %}
-                <a href="" class="basket">
-                    <span class="badge badge-dark">{{ basket.count }}</span>
+                <a href="{% url 'basket:view' %}" class="basket">
+                    <span>{{ basket.0.total_quantity }}</span>
                 </a>
+            <span>${{ basket.0.total_cost|floatformat:"g" }}</span>
             {% endif %}
 
           </div>

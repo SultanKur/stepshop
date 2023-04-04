@@ -43,6 +43,7 @@ def product(request, pk):
         'links_menu': links_menu,
         'product': product_item,
         'category': category,
+        # 'basket':
     }
 
     return render(request, 'product.html', context)
