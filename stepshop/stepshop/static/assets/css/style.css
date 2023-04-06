@@ -24,3 +24,15 @@
     color: #fff;
     border-radius: 50%;
 }
+
+#filters a {
+    color: #000;
+}
+
+#filters a:hover {
+    color: #3a8bcd;
+}
+
+#filters a.active {
+    color: #3a8bcd;
+}
