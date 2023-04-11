@@ -1,0 +1,35 @@
+<table class="table mt-3">
+    <thead>
+    <tr>
+        <th class="col-1">№</th>
+        <th class="сol">Продукт</th>
+        <th class="сol">Количество</th>
+        <th class="сol">Стоимость</th>
+        <th class="сol">Удалить</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in basket %}
+    <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ item.product }}</td>
+        <td>
+            <input type="number" name="{{ item.pk }}"
+                   min="0" value="{{ item.quantity }}">
+        </td>
+        <td>{{ item.product_cost }}</td>
+        <td>
+            <button class="btn btn-round">
+                <a href="{% url 'basket:remove' item.pk %}">Удалить</a>
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+{% if basket %}
+<div class="basket_summary">
+    Всего товаров: <strong>{{ basket.0.total_quantity }}</strong><br>
+    Общая стоимость: <strong>{{ basket.0.total_cost|floatformat:"g" }}</strong><br>
+</div>
+{% endif %}
