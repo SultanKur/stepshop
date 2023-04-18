@@ -17,7 +17,7 @@ def users(request):
         'users_list': users_list,
     }
 
-    return render(request, 'admin/users.html', context)
+    return render(request, 'admin_staff/users.html', context)
 
 
 def user_create(request):
@@ -42,7 +42,7 @@ def categories(request):
         'categories_list': categories_list,
     }
 
-    return render(request, 'admin/categories.html', context)
+    return render(request, 'admin_staff/categories.html', context)
 
 
 def category_create(request):
@@ -69,7 +69,7 @@ def products(request, pk):
         'products_list': products_list,
     }
 
-    return render(request, 'admin/products.html', context)
+    return render(request, 'admin_staff/products.html', context)
 
 
 def product_create(request, pk):
