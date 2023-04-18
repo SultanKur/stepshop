@@ -1,0 +1,17 @@
+{% extends 'admin_staff/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="mx-auto col-3">
+        <form action="{% url 'admin_staff:user_create' %}"
+              method="post"
+              enctype="multipart/form-data"
+              class="form-horizontal">
+            {% csrf_token %}
+            {{ user_form.as_p }}
+
+            <input type="submit" class="form-control" value="Создать">
+        </form>
+    </div>
+
+{% endblock %}

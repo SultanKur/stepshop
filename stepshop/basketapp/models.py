@@ -27,6 +27,8 @@ class Basket(models.Model):
         auto_now_add=True,
     )
 
+    is_active = models.BooleanField(default=True)
+
     @property
     def product_cost(self):
         return self.product.price * self.quantity
