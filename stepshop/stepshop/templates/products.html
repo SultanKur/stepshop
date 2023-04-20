@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load my_tags %}
 
 {% block title %}{{ title|capfirst }}{% endblock %}
 
@@ -15,9 +16,7 @@
           <div id="{{ product.id }}" class="item new col-md-4">
               <a href="{% url 'products:product' product.pk %}">
                 <div class="featured-item">
-                  <img src="{% if product.image %}
-                              {{ product.image.url }}
-                            {% endif %}"
+                  <img src="{{ product.image|media_folder_products }}"
                        alt="{{ product.name }}">
                   <h4>{{ product.name }}</h4>
                   <h6>${{ product.price }}</h6>

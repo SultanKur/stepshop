@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load my_tags %}
 {% block title %}{{ title|capfirst }}: {{ product.name }}{% endblock %}
 
 {% block content %}
@@ -18,12 +18,10 @@
           <div class="col-md-6">
             <div class="product-slider">
               <div id="slider" class="flexslider">
-                {% if product.image %}
-                 <img src="{{ product.image.url }}"
-                      alt="{{ product.name }}"
+                  <img src="{{ product.image|media_folder_products }}"
+                       alt="{{ product.name }}"
                       title="{{ product.name }}"
                       class="img-fluid">
-                {% endif %}
               </div>
             </div>
           </div>
@@ -67,11 +65,11 @@
               {% for product in same_products %}
               <a href="{% url 'products:product' product.pk %}">
                 <div class="featured-item">
-                  {% if product.image %}
-                   <img src="{{ product.image.url }}"
+
+                   <img src="{{ product.image|media_folder_products  }}"
                         alt="{{ product.name }}"
                         title="{{ product.name }}">
-                  {% endif %}
+
                   <h4>{{ product.name }}</h4>
                   <h6>${{ product.price }}</h6>
                 </div>
@@ -106,7 +104,7 @@
 <!--                </div>-->
 <!--              </a>-->
 <!--              <a href="single-product.html">-->
-<!--                <div class="featured-item">-->
+<!-- <div class="featured-item">-->
 <!--                  <img src="assets/images/item-06.jpg" alt="Item 6">-->
 <!--                  <h4>Urna ac diam</h4>-->
 <!--                  <h6>$65.00</h6>-->
