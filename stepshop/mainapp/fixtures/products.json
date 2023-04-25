@@ -1,1 +1,130 @@
-[{"model": "mainapp.productcategory", "pk": 2, "fields": {"name": "кеды", "description": "Повторим", "is_active": true}}, {"model": "mainapp.productcategory", "pk": 3, "fields": {"name": "Футболки", "description": "", "is_active": true}}, {"model": "mainapp.productcategory", "pk": 4, "fields": {"name": "Шорты", "description": "", "is_active": true}}]
+[
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "name": "Красные кеды",
+      "image": "product_images/item-02.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "2000.00",
+      "quantity": 3,
+      "created_at": "2023-04-18T13:04:09.025Z",
+      "updated_at": "2023-04-20T14:31:13.215Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "Подкрадули",
+      "image": "",
+      "short_desc": "",
+      "description": "",
+      "price": "222.00",
+      "quantity": 13,
+      "created_at": "2023-04-20T14:53:58.962Z",
+      "updated_at": "2023-04-25T13:13:19.918Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 3,
+      "name": "Черная футболка",
+      "image": "product_images/Black_t-shirt_n4wS352.jfif",
+      "short_desc": "",
+      "description": "",
+      "price": "2690.00",
+      "quantity": 8,
+      "created_at": "2023-04-25T13:12:29.088Z",
+      "updated_at": "2023-04-25T13:12:29.088Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 5,
+    "fields": {
+      "category": 3,
+      "name": "Белая футболка",
+      "image": "product_images/White_t-shirt_ssVYJEx.jfif",
+      "short_desc": "",
+      "description": "",
+      "price": "2690.00",
+      "quantity": 9,
+      "created_at": "2023-04-25T13:12:48.408Z",
+      "updated_at": "2023-04-25T13:12:48.408Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 6,
+    "fields": {
+      "category": 3,
+      "name": "Синяя футболка",
+      "image": "product_images/Blue_t-shirt_1LamG8f.jfif",
+      "short_desc": "",
+      "description": "",
+      "price": "2890.00",
+      "quantity": 8,
+      "created_at": "2023-04-25T13:13:07.842Z",
+      "updated_at": "2023-04-25T13:13:07.842Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 7,
+    "fields": {
+      "category": 4,
+      "name": "Черные шорты",
+      "image": "product_images/black_shorts_POXB2e9.jfif",
+      "short_desc": "",
+      "description": "",
+      "price": "3090.00",
+      "quantity": 12,
+      "created_at": "2023-04-25T13:15:06.275Z",
+      "updated_at": "2023-04-25T13:15:06.275Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 8,
+    "fields": {
+      "category": 4,
+      "name": "Белые шорты",
+      "image": "product_images/white_shorts_v29QsAs.jfif",
+      "short_desc": "",
+      "description": "",
+      "price": "2990.00",
+      "quantity": 11,
+      "created_at": "2023-04-25T13:15:36.232Z",
+      "updated_at": "2023-04-25T13:15:36.232Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 9,
+    "fields": {
+      "category": 4,
+      "name": "Красные шорты",
+      "image": "product_images/red_shorts_96wwf0y.jfif",
+      "short_desc": "",
+      "description": "",
+      "price": "2590.00",
+      "quantity": 13,
+      "created_at": "2023-04-25T13:15:53.944Z",
+      "updated_at": "2023-04-25T13:15:53.944Z",
+      "is_active": true
+    }
+  }
+]
