@@ -1,18 +1,29 @@
 [
   {
     "model": "mainapp.productcategory",
-    "pk": 1,
+    "pk": 2,
     "fields": {
-      "name": "Бобры",
-      "description": "Повторим"
+      "name": "кеды",
+      "description": "Повторим",
+      "is_active": true
     }
   },
   {
     "model": "mainapp.productcategory",
-    "pk": 2,
+    "pk": 3,
     "fields": {
-      "name": "кеды",
-      "description": "Повторим"
+      "name": "Футболки",
+      "description": "",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Шорты",
+      "description": "",
+      "is_active": true
     }
   }
 ]

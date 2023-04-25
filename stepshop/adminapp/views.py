@@ -28,6 +28,7 @@ class UsersListView(ListView):
                                          '-is_staff',
                                          'username')
 
+
 class UserCreateView(CreateView):
     model = ShopUser
     template_name = 'admin_staff/user_create.html'
@@ -38,28 +39,6 @@ class UserCreateView(CreateView):
         context = super(UserCreateView, self).get_context_data()
         context['title'] = 'пользователи/создание'
         return context
-
-
-
-# def user_create(request):
-#     title = 'пользователи | создать'
-#
-#     if request.method == 'POST':
-#         user_form = ShopUserRegisterForm(request.POST, request.FILES)
-#
-#         if user_form.is_valid():
-#             user_form.save()
-#             return HttpResponseRedirect(reverse('admin_staff:users'))
-#
-#     else:
-#         user_form = ShopUserRegisterForm()
-#
-#     context = {
-#         'title': title,
-#         'user_form': user_form,
-#     }
-
-    # return render(request, 'admin_staff/user_create.html', context)
 
 
 def user_update(request, pk):
